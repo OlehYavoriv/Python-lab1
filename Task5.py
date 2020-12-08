@@ -28,9 +28,9 @@ for i in cipher:
     elif i in small_alphabet:
         plain += small_alphabet[(small_alphabet.index(i) - key) % len(small_alphabet)]
     elif i in small_ua_alphabet:
-        cipher += small_ua_alphabet[(small_ua_alphabet.index(i) - key) % len(small_ua_alphabet)]
+        plain += small_ua_alphabet[(small_ua_alphabet.index(i) - key) % len(small_ua_alphabet)]
     elif i in big_ua_alphabet:
-        cipher += big_ua_alphabet[(big_ua_alphabet.index(i) - key) % len(big_ua_alphabet)]
+        plain += big_ua_alphabet[(big_ua_alphabet.index(i) - key) % len(big_ua_alphabet)]
     else:
         plain += i
 print("Your message is :", cipher)
